@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h2> Questions </h2>
+{% for quiz in quizzes %}
+<h3>{{ quiz.quiz_name}}</h3>
+{% for question in quiz.quiz_questions %}
+<a href="{{ url_for('question', qid=question.id) }}">{{question}}</a> | <a href="{{ url_for('update_q', qid=question.id) }}"> Update </a> | <a href="{{ url_for('delete_q', qid=question.id) }}"> Delete </a>
+<br>
+{% endfor %}
+{% endfor %}
+{% endblock body %}

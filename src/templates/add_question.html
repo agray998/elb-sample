@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h2> Add a New Question </h2>
+<br>
+<div class='form'>
+            <form method='POST' action=''>
+                {{ form.hidden_tag() }}
+                {{ form.q_num.label }} {{ form.q_num }}
+                {{ form.q_name.label }} {{ form.q_name }}
+                {{ form.quiz.label }} {{ form.quiz }}
+                <br>
+                {{ form.submit }}
+            {{ message }}
+	    </form>
+</div>
+{% endblock body %}
