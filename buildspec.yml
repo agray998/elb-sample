@@ -19,6 +19,6 @@ phases:
     commands:
       - "echo Done!"
 
-artifacts:
-  files:
-    - htmlcov/*
+# artifacts:
+#   files:
+#     - htmlcov/*
