@@ -1,19 +1,19 @@
 from flask import url_for
 from flask_testing import TestCase
-from application import app, db
-from application.models import Questions, Options, Quiz
+from src import application, db
+from src.models import Questions, Options, Quiz
 
 # Create the base class
 class TestBase(TestCase):
     def create_app(self):
 
         # Pass in testing configurations for the app.
-        app.config.update(SQLALCHEMY_DATABASE_URI="sqlite:///test.db",
+        application.config.update(SQLALCHEMY_DATABASE_URI="sqlite:///test.db",
                 SECRET_KEY='TEST_SECRET_KEY',
                 DEBUG=True,
                 WTF_CSRF_ENABLED=False
                 )
-        return app
+        return application
 
     def setUp(self):
         """
