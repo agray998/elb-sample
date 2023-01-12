@@ -1,9 +1,5 @@
 version: 0.2
 
-env:
-  parameter-store:
-    SECRET_KEY: /CodeBuild/SECRET_KEY
-
 phases:
   install:
     commands:
