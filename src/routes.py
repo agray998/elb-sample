@@ -58,7 +58,6 @@ def add_o(qid):
         o_letter = form.o_letter.data
         option = form.o_option.data
         o_status = form.o_status.data
-        quest_id = qid
         newopt = Options(optletter = o_letter, o_option = option, o_status = o_status, question_id = qid)
         db.session.add(newopt)
         db.session.commit()
@@ -86,7 +85,6 @@ def update_o(oid):
         o_letter = form.o_letter.data
         option = form.o_option.data
         o_status = form.o_status.data
-        opt_id = oid
         opt = Options.query.filter_by(id=oid).first()
         qid = Questions.query.filter_by(id=opt.question_id).first().id
         opt.optletter = o_letter
