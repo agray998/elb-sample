@@ -4,17 +4,17 @@ phases:
   install:
     commands:
       - "echo Installing"
-      # - "apt update"
-      # - "apt install python3 python3-pip -y"
+      - "apt update"
+      - "apt install python3 python3-pip -y"
   pre_build:
     commands:
       - "echo Setup"
-      # - "pip3 install -r requirements.txt"
-      # - "rm tests/no_test_int.py tests/test_int_update.py"
+      - "pip3 install -r requirements.txt"
+      - "rm tests/no_test_int.py tests/test_int_update.py"
   build:
     commands:
       - "echo Testing"
-      # - "python3 -m pytest --cov --cov-report=html"
+      - "python3 -m pytest --cov --cov-report=html"
   post_build:
     commands:
       - "echo Done!"
